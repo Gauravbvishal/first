@@ -6,7 +6,7 @@ import boxImage2 from "../Assets/p3.jpg";
 import boxImage3 from "../Assets/p4.jpg";
 import boxImage4 from "../Assets/p5.jpg";
 import boxImage5 from "../Assets/p6.jpg";
-import boxImage6 from "../Assets/p7.jpg";
+import boxImage6 from "../Assets/p7.jpg"
 // import companyImage from "../Assets/RSB-LOGO.png"; // Path to your company image
 
 export default function AboutPage() {
