@@ -1,0 +1,119 @@
+ /* Wrapper to contain the heading and the content */
+.vision-mission-wrapper {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Heading styles */
+.page-heading {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Main container for the image and content */
+.vision-mission-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 80vh;
+  background-color: black;
+  margin-top: 20px;
+  opacity: 0;
+  animation: slideUp 1.5s ease-in-out forwards;
+}
+
+/* Left side image */
+.image-background {
+  width: 48%;
+  background-image: url('https://www.securities.io/wp-content/uploads/2023/11/future-AI.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Animation on hover for the image */
+.image-background:hover {
+  transform: scale(1.05);
+}
+
+/* Right side content */
+.content-container {
+  width: 48%;
+  padding: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Animation on hover for content */
+.content-container:hover {
+  transform: translateX(10px);
+}
+
+.content-container h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.content-container p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vision-mission-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-background, .content-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .content-container {
+    padding: 20px;
+  }
+
+  .content-container h2 {
+    font-size: 1.8em;
+  }
+
+  .content-container p {
+    font-size: 1.1em;
+  }
+
+  .page-heading {
+    font-size: 2.5em;
+  }
+}

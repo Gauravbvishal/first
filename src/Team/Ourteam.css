@@ -1,0 +1,95 @@
+.team-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .team-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding: 50px;
+  }
+  
+  .team-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top to prevent misalignment */
+    gap: 80px; /* Adds space between the image and the details */
+    flex-wrap: wrap; /* Ensures the content stays responsive */
+    height: auto; /* Adjusts height based on content */
+    width: 100%;
+    max-width: 1200px; /* Restrict the max width */
+    margin: 0 auto; /* Center the content on the page */
+  }
+  
+  .image-section {
+    flex: 1;
+    max-width: 300px; /* Restrict the image section width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .team-image {
+    width: 100%;
+    height: 100%;
+    max-width: 300px; /* Set max width for image */
+    max-height: 300px; /* Set max height for image */
+    object-fit: cover; /* Ensures the images are contained */
+    transition: transform 0.5s ease;
+    border-radius: 15px;/* Ensures the image fits well in the container */
+  }
+  
+  .details-section {
+    flex: 1;                
+    padding: 10px;
+    text-align: left;
+    animation: slide-in 0.5s ease-in-out forwards;
+    opacity: 0;
+  
+  }
+  
+  .details-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    
+  }
+  
+  .details-section p {
+    font-size: 1.2em;
+    margin-bottom: 15px; /* Adds spacing between bio and other content */
+  }
+  
+  .team-bio {
+    margin-top: 10px;
+    font-size: 1em;
+    color:aquamarine;
+    line-height: 1.6; /* Improves readability of bio content */
+    max-height: 250px; /* Restricts the bio height */
+    overflow-y: auto; /* Adds scroll if the bio content overflows */
+  }
+  
+  /* Slide-in from the right animation */
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .team-section {
+      flex-direction: column; /* Stack image and details vertically on small screens */
+      align-items: center; /* Center align for smaller screens */
+    }
+  
+    .details-section {
+      text-align: center; /* Center text for smaller screens */
+    }
+  }
+  
